@@ -1,0 +1,22 @@
+{
+  "header.gif": {
+    "bytes": 93466,
+    "sha256": "ac0ec5d0879f8ced6a06482195aa9945b49fffb7f1daf832b7b862d0dd6eea2e"
+  },
+  "mtg.woff": {
+    "bytes": 28896,
+    "sha256": "b3c8a1107155b9f7661b47a691530f57fda60aa687e1bfb8aed10c3f56ae77df"
+  },
+  "mtg.woff2": {
+    "bytes": 25604,
+    "sha256": "faed6a27f34ca029fa55efe73a1ed0f0a940a8f8ed1e550d6439e99934b24e4c"
+  },
+  "outer-background.gif": {
+    "bytes": 328714,
+    "sha256": "2f96dabc92d579a017277b81a25a8850a9f9ba78cdf192de3a6d392b0f38e669"
+  },
+  "post-texture.gif": {
+    "bytes": 337031,
+    "sha256": "b8979c585b0b9822ce99c228d253c15919a0949db68fc0e8496babed51b0cfc1"
+  }
+}
