@@ -1,6 +1,6 @@
 # Understanding Ancestral assets
 
-Public asset hosting for [Understanding Ancestral Recall](https://www.understandingancestral.com/): the original custom MTG font, backgrounds, banner, and favicon.
+Public asset hosting for [Understanding Ancestral Recall](https://www.understandingancestral.com/): the original custom MTG font, backgrounds, banner, favicon, and shared PDF icon.
 
 [GitHub Pages](https://danny-friedman.github.io/understanding-ancestral-assets/) publishes the root of the `main` branch. Assets use versioned URLs under `assets/v1/`, for example:
 
