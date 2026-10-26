@@ -66,6 +66,15 @@ class AssetTests(unittest.TestCase):
             self.assertFalse((stage / ".git").exists())
             self.assertFalse((stage / "scripts").exists())
 
+    def test_linked_information_directory_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.fixture(root)
+            (root / "upkeep").rename(root / "external")
+            (root / "upkeep").symlink_to(root / "external", target_is_directory=True)
+            with self.assertRaisesRegex(ValueError, "unsafe site file"):
+                assets.inventory(root)
+
 
 if __name__ == "__main__":
     unittest.main()
