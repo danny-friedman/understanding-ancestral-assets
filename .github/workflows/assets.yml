@@ -3,7 +3,7 @@ name: Validate and publish assets
 on:
   pull_request:
   push:
-    branches: [main, codex/validated-pages-deployment]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -29,17 +29,6 @@ jobs:
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: build/site
-
-  baseline:
-    name: Check existing public host before migration
-    if: github.event_name == 'push' && github.ref == 'refs/heads/codex/validated-pages-deployment'
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-        with:
-          persist-credentials: false
-      - run: python3 scripts/assets.py --verify-public
 
   deploy:
     name: Publish validated assets
