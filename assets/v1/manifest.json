@@ -1,4 +1,9 @@
 {
+  "favicon.ico": {
+    "bytes": 1150,
+    "sha256": "fb4804e9d701d1b5d8d7e130317231d36fa36a06e0c3a8f437122ba69ae7ef2b",
+    "source": "Blogger Takeout export dated 2026-10-25: original blog favicon.ico"
+  },
   "header.gif": {
     "bytes": 93466,
     "sha256": "ac0ec5d0879f8ced6a06482195aa9945b49fffb7f1daf832b7b862d0dd6eea2e"
