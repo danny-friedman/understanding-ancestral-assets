@@ -19,9 +19,10 @@ SIGNATURES = {".gif": (b"GIF87a", b"GIF89a"), ".png": (b"\x89PNG\r\n\x1a\n",),
 
 
 def inventory(root=ROOT):
-    approved = [Path("index.html"), Path("robots.txt"), Path(".nojekyll")]
+    approved = [Path("index.html"), Path("robots.txt"), Path(".nojekyll"),
+                Path("upkeep/index.html"), Path("upkeep/privacy.html"), Path("upkeep/terms.html")]
     for item in approved:
-        if not (root / item).is_file() or (root / item).is_symlink():
+        if not (root / item).is_file() or (root / item).is_symlink() or any((root / parent).is_symlink() for parent in item.parents):
             raise ValueError(f"missing/unsafe site file: {item}")
     versions = sorted((root / "assets").iterdir())
     if not versions:

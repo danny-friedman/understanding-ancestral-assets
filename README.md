@@ -12,7 +12,7 @@ The theme source and backups are kept in a private repository. Article photos re
 
 PR checks validate SHA-256 hashes, sizes, file signatures, safe filenames and the asset manifest. Tests confirm that damaged, unlisted and linked files are rejected. On `main`, the validated artifact is deployed, then actual published bytes, MIME types and font CORS are checked with one propagation retry. Failed validation prevents the deployment job. PRs never deploy.
 
-Only `index.html`, `robots.txt`, `.nojekyll` and manifest-listed files under versioned `assets/vN/` directories enter the Pages bundle. Scripts, tests, workflow files and Git metadata are excluded. The existing font/background/banner/icon bytes are unchanged by this migration. Retain older version directories when adding replacements so old theme URLs continue to work.
+Only `index.html`, `robots.txt`, `.nojekyll`, the three explicitly listed `upkeep/` information pages and manifest-listed files under versioned `assets/vN/` directories enter the Pages bundle. Scripts, tests, workflow files and Git metadata are excluded. The existing font/background/banner/icon bytes are unchanged by this migration. Retain older version directories when adding replacements so old theme URLs continue to work.
 
 Local checks use Python’s standard library:
 
@@ -23,3 +23,5 @@ python3 scripts/assets.py --verify-public
 ```
 
 Use a fresh staging directory. Before merging an intentional asset change, `--verify-public` still compares against the previously published files; the production workflow runs that check after deployment. Public site/certificate/video monitoring and its private reports live in the separate private maintenance repository.
+
+The `upkeep/` pages describe the owner-private monitoring tool and its privacy/data-use and access practices for Google OAuth configuration. They contain no script source, private report links, account identifiers or credentials and do not deploy an executable application.

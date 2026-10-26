@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Understanding Ancestral Hosted Upkeep</title>
+<style>body{max-width:48rem;margin:3rem auto;padding:0 1rem;font:1.05rem/1.6 system-ui,sans-serif;color:#172331;background:#faf8f2}a{color:#174a8b}</style>
+<body><main>
+<h1>Privacy and data use</h1>
+<p>Understanding Ancestral Hosted Upkeep is a private tool used by the site's owner. Updated October 26, 2026.</p>
+<h2>Data accessed and purpose</h2>
+<p>The main worker reads pending Blogger comments, including their author, content, publication time and identifiers, so the owner can review them. It reads private GitHub Actions run reports to check site health, certificate expiry and monitoring coverage. A separate worker reads the privacy, embedding, processing and regional restriction settings of ten YouTube videos belonging to the owner.</p>
+<h2>Storage and notifications</h2>
+<p>The main worker creates dated reports in an owner-private Google Drive folder. Its Drive permission is limited to files created or opened for the app; it does not receive general access to the owner's Drive. Reports are retained until the owner removes them. Script Properties store configuration, credentials, issue state and video settings. The video worker also writes settings-only reports to private execution logs, subject to Google's log retention.</p>
+<p>Email alerts go only to the owner's configured address. They can include comment authors, findings and links to private reports. The workers can send email but cannot read Gmail. They do not automatically publish, delete or mark comments as spam, and do not change videos.</p>
+<h2>Sharing and service providers</h2>
+<p>Google hosts the workers, reports, authorization and email delivery. GitHub hosts source and health reports, and receives authenticated workflow requests. The workers do not send Blogger comment data or YouTube account data to GitHub. Google user data is not sold, used for advertising or used to train AI models by these workers. This use of Google user data follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+<h2>Control and access</h2>
+<p>Only the owner has access to the script projects and report folder. The owner can revoke authorization in <a href="https://myaccount.google.com/permissions">Google Account connections</a>, remove the Apps Script triggers and delete retained reports or stored script state. Revoking authorization stops future Google API access; it does not remove previously saved reports. The owner can revoke the dedicated GitHub token separately.</p>
+<p>Visitors do not authorize this tool and this information page has no analytics, forms or cookies added by the tool. GitHub Pages and linked services operate under their own policies. Questions about the tool can be raised with the owner through the <a href="https://www.understandingancestral.com/">blog</a>.</p>
+<p><a href="./">About the tool</a> · <a href="terms.html">Use and access</a></p>
+</main></body></html>
